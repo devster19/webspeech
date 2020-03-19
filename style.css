@@ -1,0 +1,228 @@
+
+
+html{
+  overflow: hidden;
+}
+body {
+  background: linear-gradient(-120deg,#008200,#205527,#ff2b00,#c3c3c3);
+  font-family: 'Prompt', sans-serif;
+  font-weight: 200;
+  font-size: 20px;
+  height: 100%;
+  margin: 0;
+  padding:0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.brand-cnt{
+  text-align: center;
+}
+.brand-cnt img{
+  width:250px;
+  padding-top:2em;
+  padding-bottom: 20px;
+  position: relative;
+}
+/* .bot-cnt:after{
+  content:"Jessica💖";
+  position: absolute;
+  left: -5px;
+  bottom:0;
+  font-size: 18px;
+  color: #2e92eb;
+}
+
+.user-cnt:after{
+  content:"Relaxer 🌟";
+  position: absolute;
+  right: -15px;
+  bottom:0;
+  font-size: 16px;
+  color: #2e92eb;
+} */
+.words {
+  max-width: 600px;
+  width:100%;
+  margin: 50px auto 0;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 10px 10px 0 rgba(0,0,0,0.1);
+  padding: 5rem 2rem 2rem 2rem;
+  background: #fff;
+  background-size: 100% 3rem;
+  position: relative;
+  line-height: 2rem;
+  height: 400px;
+  overflow-y: scroll;
+  
+}
+p{
+  margin:0 0 0 0em;
+}
+
+.avatar{
+  width:65px;
+  height: 65px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.row{
+  display: flex;
+  align-items: center;
+}
+.row:nth-child(odd){
+  
+  justify-content: flex-start;
+}
+.row:nth-child(even){
+  justify-content: flex-end;
+}
+.speech-cnt{
+  padding: 2px 10px;
+  background: #2e92eb;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 10px;
+  margin-top: -100px;
+  position: relative;
+  max-width: 350px;
+}
+.speech-cnt.speech-bot::before{
+  content: '';
+	position: absolute;
+	bottom: 0;
+	left: 5px;
+	width: 0;
+	height: 0;
+	border: 10px solid transparent;
+	border-top-color: #2e92eb;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: 5px;
+	margin-bottom: -10px;
+}
+.speech-cnt.speech-user::before{
+  content: '';
+	position: absolute;
+	bottom: 0;
+	right: 5px;
+	width: 0;
+	height: 0;
+	border: 10px solid transparent;
+	border-top-color: #2e92eb;
+	border-bottom: 0;
+	border-right: 0;
+	margin-right: 5px;
+	margin-bottom: -10px;
+}
+
+.speech-cnt .dots.active{
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: #2e92eb;
+  border-radius: 10px;
+  text-align: center;
+  
+}
+.speech-cnt .dots {
+  display: none;
+}
+.speech-cnt .dots span{
+    display:inline-block;
+		width:4px;
+		height:4px;
+		border-radius:50%;
+		margin-right:3px;
+		background:#fff;
+    animation: wave 1.3s linear infinite;
+}
+.speech-cnt .dots span:nth-child(2){
+  animation-delay: -1.1s;
+}
+.speech-cnt .dots span:nth-child(3){
+  animation-delay: -0.9s;
+}
+
+@keyframes wave {
+	0%, 60%, 100% {
+		transform: initial;
+	}
+
+	30% {
+    transform: translateY(-4px);
+    
+	}
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?w1v6s1');
+  src:  url('fonts/icomoon.eot?w1v6s1#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?w1v6s1') format('truetype'),
+    url('fonts/icomoon.woff?w1v6s1') format('woff'),
+    url('fonts/icomoon.svg?w1v6s1#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-mic:before {
+  content: "\e91e";
+}
+button{
+  padding: 15px;
+  border-radius: 50%;
+  outline: none;
+  transition: all .5s ease-in-out;
+}
+button.active{
+  background: #2e92eb;
+}
+.icon-mic{
+  font-size: 5em;
+}
+.mic-cnt{
+  text-align: center;
+  position: relative;
+  z-index: 999;
+  top: -40px;
+}
+
+.howto{
+  text-align: center;
+  opacity: 1;
+  transition: all .5s ease-in-out;
+}
+.howto.active{
+  transform: translateY(-400px);
+  margin-bottom: -300px;
+  opacity: 0.4; 
+}
+.howto img{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid lightgrey;
+  margin-top:20px;
+}
